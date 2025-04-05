@@ -1,41 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #519ce9}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #d65562}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #9ba2b1}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #9ba2b1; min-height: 16.0px}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #88b966}
-    span.s1 {color: #b85dd5}
-    span.s2 {color: #9ba2b1}
-    span.s3 {color: #d65562}
-    span.s4 {color: #88b966}
-  </style>
-</head>
-<body>
-<p class="p1">&lt;!DOCTYPE <span class="s1">html</span>&gt;</p>
-<p class="p2"><span class="s2">&lt;</span>html<span class="s2">&gt;</span></p>
-<p class="p3"><span class="Apple-converted-space">  </span>&lt;<span class="s3">head</span>&gt;</p>
-<p class="p3"><span class="Apple-converted-space">    </span>&lt;<span class="s3">script</span>&gt;</p>
-<p class="p3"><span class="Apple-converted-space">      </span>window.onload = <span class="s1">function</span> () {</p>
-<p class="p3"><span class="Apple-converted-space">        </span><span class="s1">const</span> urlParams = <span class="s1">new</span> URLSearchParams(window.location.search);</p>
-<p class="p3"><span class="Apple-converted-space">        </span><span class="s1">const</span> behandlung = urlParams.get(<span class="s4">"behandlung"</span>);</p>
-<p class="p3"><span class="Apple-converted-space">        </span><span class="s1">const</span> audio = urlParams.get(<span class="s4">"audio_url"</span>);</p>
-<p class="p4"><br></p>
-<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">const</span><span class="s2"> fullURL = </span>`https://hook.eu2.make.com/yiosk7wov99f11bulmptehvhz92qxaai?behandlung=<span class="s3">${encodeURIComponent(behandlung)}</span>&amp;audio_url=<span class="s3">${encodeURIComponent(audio)}</span>`<span class="s2">;</span></p>
-<p class="p4"><br></p>
-<p class="p3"><span class="Apple-converted-space">        </span>window.open(fullURL, <span class="s4">"_blank"</span>, <span class="s4">"width=800,height=650"</span>);</p>
-<p class="p3"><span class="Apple-converted-space">        </span>window.close();</p>
-<p class="p3"><span class="Apple-converted-space">      </span>}</p>
-<p class="p3"><span class="Apple-converted-space">    </span>&lt;/<span class="s3">script</span>&gt;</p>
-<p class="p3"><span class="Apple-converted-space">  </span>&lt;/<span class="s3">head</span>&gt;</p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span>&lt;</span>body<span class="s2">&gt;&lt;/</span>body<span class="s2">&gt;</span></p>
-<p class="p2"><span class="s2">&lt;/</span>html<span class="s2">&gt;</span></p>
-</body>
+  <head>
+    <script>
+      window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const behandlung = urlParams.get("behandlung");
+        const audio = urlParams.get("audio_url");
+
+        const fullURL = `https://hook.eu2.make.com/yiosk7wov99f11bulmptehvhz92qxaai?behandlung=${encodeURIComponent(behandlung)}&audio_url=${encodeURIComponent(audio)}`;
+
+        window.open(fullURL, "_blank", "width=800,height=650");
+        window.close();
+      }
+    </script>
+  </head>
+  <body></body>
 </html>
